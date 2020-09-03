@@ -6,7 +6,7 @@ import { getWelcome } from "../api"
 import Card from "./Card"
 import GameOver from "./GameOver"
 import HighLow from "./HighLow"
-import InAndOut from "./InAndOut"
+import InAndOut from "./InOrOut"
 
 class App extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class App extends React.Component {
         <Route exact path="/" component={Card} />
         <Route path="/gameOver" component={GameOver} />
         <Route path="/HighLow" component={HighLow} />
-        <Route path="/InAndOut" component={InAndOut}/>
+        <Route path="/InOrdOut" component={InOrOut}/>
       </>
     )
   }
