@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Redirect } from "react-router-dom"
+import { Redirect, Link } from "react-router-dom"
 import { getCard } from "../api"
 
 export default class Card extends Component {
@@ -38,33 +38,29 @@ export default class Card extends Component {
   //   setTimeout(() => 2000)
   // }
   render() {
-    const s = {
+    const styling = {
       textDecorationLine: "line-through",
     }
 
     //if (
-      //this.state.suit === "HEARTS" || this.state.suit === "DIAMONDS" && this.state.color === "black") {
-      //return <Redirect to="/gameOver" />
+    //this.state.suit === "HEARTS" || this.state.suit === "DIAMONDS" && this.state.color === "black") {
+    //return <Redirect to="/gameOver" />
     //} else if (
-      //this.state.suit === "SPADES" || this.state.suit === "CLUBS" && this.state.color === "red") {
-      //return <Redirect to="/gameOver" />
+    //this.state.suit === "SPADES" || this.state.suit === "CLUBS" && this.state.color === "red") {
+    //return <Redirect to="/gameOver" />
     //} else if (this.state.suit === "SPADES" || this.state.suit === "CLUBS" && this.state.color === "black") {
-      //return <Redirect to={{ pathname: "/HighLow", image: this.state.image, value: this.state.value }} />
+    //return <Redirect to={{ pathname: "/HighLow", image: this.state.image, value: this.state.value }} />
     //}
 
     return (
       <div>
-        <h1>
-          Give
-          <span style={s}>Alcohol</span>
-          Love To Everyone
-        </h1>
-        <button onClick={this.redCard}>Red</button>
-        <button onClick={this.blackCard}>Black</button>
+        <h1>In or Out?</h1>
         <img
-          style={{ height: "400px", width: "400px" }}
-          src={this.state.image}
+          style={{ height: '400px', width: '400px' }}
+          src={this.state.image} 
         />
+        <Link onClick={this.InCard} to= {{ pathname: "/Picture" }}><button >In</button></Link>
+        <Link onClick={this.OutCard} to= {{ pathname: "/Picture" }}><button>Out</button></Link>
       </div>
     )
   }
