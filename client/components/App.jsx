@@ -23,6 +23,7 @@ class App extends React.Component {
         <Route exact path="/" component={Card} />
         <Route path="/gameOver" component={GameOver} />
         <Route path="/HighLow" component={HighLow} />
+        <Route path="/InAndOut" component={InAndOut}/>
       </>
     )
   }
