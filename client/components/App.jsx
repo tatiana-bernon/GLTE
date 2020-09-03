@@ -6,6 +6,7 @@ import { getWelcome } from "../api"
 import Card from "./Card"
 import GameOver from "./GameOver"
 import HighLow from "./HighLow"
+import InAndOut from "./InAndOut"
 
 class App extends React.Component {
   state = {
