@@ -17,7 +17,7 @@ class App extends React.Component {
     )
   }
   render() {
-    return (
+    return (InOrOut
       <>
         <Route exact path="/" component={Card} />
         <Route path="/gameOver" component={GameOver} />
