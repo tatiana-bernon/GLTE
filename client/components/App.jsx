@@ -1,18 +1,28 @@
-import React from 'react'
+import React from "react"
+import { Route } from "react-router-dom"
 
-import { getWelcome } from '../api'
+import { getWelcome } from "../api"
+
+import Card from "./Card"
+import GameOver from "./GameOver"
+import HighLow from "./HighLow"
 
 class App extends React.Component {
   state = {
-    welcomeStatement: ''
+    welcomeStatement: "",
   }
-  componentDidMount () {
-    getWelcome()
-      .then(res => this.setState({ welcomeStatement: res.statement }))
+  componentDidMount() {
+    getWelcome().then((res) =>
+      this.setState({ welcomeStatement: res.statement })
+    )
   }
-  render () {
+  render() {
     return (
-      <h1>{this.state.welcomeStatement}</h1>
+      <>
+        <Route exact path="/" component={Card} />
+        <Route path="/gameOver" component={GameOver} />
+        <Route path="/HighLow" component={HighLow} />
+      </>
     )
   }
 }
