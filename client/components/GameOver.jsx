@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class GameOver extends Component {
   state ={
-    image:
+    image: this.props.location.image
   }
   render () {
     return (
@@ -13,7 +14,8 @@ export default class GameOver extends Component {
           style={{ height: '400px', width: '400px' }}
           src={this.state.image}
         />
-        <a href="/">Reset</a>
+        <Link to={{ pathname: '/' }} ><button>Reset</button></Link>
+        <a href="/"></a>
       </div>
     )
   }

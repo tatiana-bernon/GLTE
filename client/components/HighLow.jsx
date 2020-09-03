@@ -32,18 +32,18 @@ export default class HighLow extends Component {
   }
   render () {
     if (this.state.number === 'a') {
-      return <Redirect to={{ pathname: '/gameOver', image: this.state.image, value: this.state.value, color: this.state.color, suit: this.state.suit, number: this.state.number }}/>
+      return <Redirect to={{ pathname: '/gameOver', image: this.state.image }}/>
     }
     return (
       <div>
-        <h1>HEYYYYY</h1>
+        <h1>High or Low?</h1>
         <img
           style={{ height: '400px', width: '400px' }}
           src={this.state.image}
         />
 
-        <Link onClick={this.highCard} to={{ pathname: '/route', image: this.state.image }} ><button>High Card</button></Link>
-        <button onClick={this.lowCard}>Low Card</button>
+        <button onClick={this.highCard}>High Card</button>
+        <Link onClick={this.lowCard} to={{ pathname: '/gameOver', image: this.state.image }} ><button>Low Card</button></Link>
       </div>
     )
   }
