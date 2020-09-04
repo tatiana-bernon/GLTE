@@ -35,6 +35,7 @@ export default class HighLow extends Component {
       const HighLowCard = this.state.image
       return <Redirect to={{ pathname: '/InOrOut', image: this.state.image, cardImage: this.props.location.cardImage, HighLowCard: HighLowCard }}/>
     }
+    
     return (
       <div>
         <h1>Higher or Lower?</h1>
