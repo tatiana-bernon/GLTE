@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { getCard } from '../api'
 
 export default class HighLow extends Component {
@@ -38,12 +38,12 @@ export default class HighLow extends Component {
       <div>
         <h1>High or Low?</h1>
         <img
-          style={{ height: '400px', width: '400px' }}
+          style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
 
         <button onClick={this.highCard}>High Card</button>
-        <Link onClick={this.lowCard} to={{ pathname: '/gameOver', image: this.state.image }} ><button>Low Card</button></Link>
+        <button onClick={this.lowCard}>Low Card</button>
       </div>
     )
   }
