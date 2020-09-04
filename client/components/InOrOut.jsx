@@ -41,7 +41,7 @@ export default class InOrOut extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
-
+        <br></br>
         <button onClick={this.InCard}>In</button>
         <button onClick={this.OutCard}>Out</button>
       </div>

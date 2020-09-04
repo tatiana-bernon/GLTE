@@ -54,6 +54,7 @@ export default class Picture extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
+        <br></br>
         <button onClick={this.pictureCard}>Picture</button>
         <button onClick={this.nonPictureCard}>Non-Picture</button>
       </div>

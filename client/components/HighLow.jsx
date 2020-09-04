@@ -41,7 +41,7 @@ export default class HighLow extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
-
+        <br></br>
         <button onClick={this.highCard}>Higher</button>
         <button onClick={this.lowCard}>Lower</button>
       </div>

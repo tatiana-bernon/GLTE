@@ -60,12 +60,13 @@ export default class Card extends Component {
         <h1>
           Red or Black?
         </h1>
-        <button onClick={this.redCard}>Red</button>
-        <button onClick={this.blackCard}>Black</button>
         <img
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
+        <br></br>
+        <button onClick={this.redCard}>Red</button>
+        <button onClick={this.blackCard}>Black</button>
       </div>
     )
   }

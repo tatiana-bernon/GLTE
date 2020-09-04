@@ -13,6 +13,7 @@ export default class GameOver extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
+        <br></br>
         <Link to={{ pathname: '/' }} ><button>Reset</button></Link>
         <a href="/"></a>
       </div>
