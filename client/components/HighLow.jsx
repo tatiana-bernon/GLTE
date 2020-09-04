@@ -43,9 +43,9 @@ export default class HighLow extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
-
-        <button onClick={this.highCard}>Higher</button>
-        <button onClick={this.lowCard}>Lower</button>
+        <br></br>
+        <button className="button is-rounded" onClick={this.highCard}>Higher</button>
+        <button className="button is-rounded" onClick={this.lowCard}>Lower</button>
       </div>
     )
   }

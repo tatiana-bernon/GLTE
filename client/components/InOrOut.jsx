@@ -46,9 +46,9 @@ export default class InOrOut extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.props.location.HighLowCard}
         />
-
-        <button onClick={this.InCard}>In</button>
-        <button onClick={this.OutCard}>Out</button>
+        <br></br>
+        <button className="button is-rounded" onClick={this.InCard}>In</button>
+        <button className="button is-rounded" onClick={this.OutCard}>Out</button>
       </div>
     )
   }

@@ -25,7 +25,8 @@ export default class GameOver extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.props.location.PictureCard}
         />
-        <Link to={{ pathname: '/' }} ><button>Reset</button></Link>
+        <br></br>
+        <Link to={{ pathname: '/' }} ><button className="button is-rounded">Reset</button></Link>
         <a href="/"></a>
       </div>
     )

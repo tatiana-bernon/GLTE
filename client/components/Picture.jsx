@@ -61,9 +61,9 @@ export default class Picture extends Component {
           style={{ height: '300px', width: '250px' }}
           src={this.props.location.InOrOutCard}
         />
-
-        <button onClick={this.pictureCard}>Picture</button>
-        <button onClick={this.nonPictureCard}>Non-Picture</button>
+        <br></br>
+        <button className="button is-rounded" onClick={this.pictureCard}>Picture</button>
+        <button className="button is-rounded" onClick={this.nonPictureCard}>Non-Picture</button>
       </div>
     )
   }
