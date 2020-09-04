@@ -14,7 +14,7 @@ export default class GameOver extends Component {
           src={this.state.image}
         />
         <br></br>
-        <Link to={{ pathname: '/' }} ><button>Reset</button></Link>
+        <Link to={{ pathname: '/' }} ><button className="button is-rounded">Reset</button></Link>
         <a href="/"></a>
       </div>
     )

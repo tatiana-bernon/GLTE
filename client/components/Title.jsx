@@ -12,7 +12,7 @@ export default class GameOver extends Component {
           src={'https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png'}
         />
         <br></br>
-        <Link to={{ pathname: '/Card' }} ><button>Play Now!</button></Link>
+        <Link to={{ pathname: '/Card' }} ><button className="button is-rounded">Play Now!</button></Link>
       </div>
     )
   }

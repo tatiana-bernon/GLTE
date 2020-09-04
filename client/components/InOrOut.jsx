@@ -42,8 +42,8 @@ export default class InOrOut extends Component {
           src={this.state.image}
         />
         <br></br>
-        <button onClick={this.InCard}>In</button>
-        <button onClick={this.OutCard}>Out</button>
+        <button className="button is-rounded" onClick={this.InCard}>In</button>
+        <button className="button is-rounded" onClick={this.OutCard}>Out</button>
       </div>
     )
   }

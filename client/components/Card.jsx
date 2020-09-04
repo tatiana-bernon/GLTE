@@ -65,8 +65,8 @@ export default class Card extends Component {
           src={this.state.image}
         />
         <br></br>
-        <button onClick={this.redCard}>Red</button>
-        <button onClick={this.blackCard}>Black</button>
+        <button className="button is-rounded" onClick={this.redCard}>Red</button>
+        <button className="button is-rounded" onClick={this.blackCard}>Black</button>
       </div>
     )
   }

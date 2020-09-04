@@ -55,8 +55,8 @@ export default class Picture extends Component {
           src={this.state.image}
         />
         <br></br>
-        <button onClick={this.pictureCard}>Picture</button>
-        <button onClick={this.nonPictureCard}>Non-Picture</button>
+        <button className="button is-rounded" onClick={this.pictureCard}>Picture</button>
+        <button className="button is-rounded" onClick={this.nonPictureCard}>Non-Picture</button>
       </div>
     )
   }
