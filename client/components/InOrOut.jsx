@@ -30,7 +30,7 @@ export default class InOrOut extends Component {
       })
     })
   }
-  render() {
+  render () {
     if (this.state.number === 'a') {
       return <Redirect to={{ pathname: '/Picture', image: this.state.image }} />
     }
