@@ -32,14 +32,19 @@ export default class InOrOut extends Component {
   }
   render () {
     if (this.state.number === 'a') {
-      return <Redirect to={{ pathname: '/Picture', image: this.state.image }} />
+      const InOrOutCard = this.state.image
+      return <Redirect to={{ pathname: '/Picture', image: this.state.image, cardImage: this.props.location.cardImage, HighLowCard: this.props.location.HighLowCard, InOrOutCard: InOrOutCard }} />
     }
     return (
       <div>
         <h1>In or Out?</h1>
         <img
           style={{ height: '300px', width: '250px' }}
-          src={this.state.image}
+          src={this.props.location.cardImage}
+        />
+        <img
+          style={{ height: '300px', width: '250px' }}
+          src={this.props.location.HighLowCard}
         />
         <br></br>
         <button className="button is-rounded" onClick={this.InCard}>In</button>
