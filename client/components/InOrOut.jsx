@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { Redirect, Link } from "react-router-dom"
-import { getCard } from "../api"
+import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
+import { getCard } from '../api'
 
 export default class InOrOut extends Component {
   state = {
@@ -38,12 +38,12 @@ export default class InOrOut extends Component {
       <div>
         <h1>In or Out?</h1>
         <img
-          style={{ height: '400px', width: '400px' }}
+          style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
 
-        <button onClick={this.InCard}>In Card</button>
-        <Link onClick={this.OutCard} to={{ pathname: '/Picture', image: this.state.image }} ><button>Out Card</button></Link>
+        <button onClick={this.InCard}>In</button>
+        <button onClick={this.OutCard}>Out</button>
       </div>
     )
   }

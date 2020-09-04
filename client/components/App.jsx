@@ -3,11 +3,12 @@ import { Route } from 'react-router-dom'
 
 import { getWelcome } from '../api'
 
-import Card from "./Card"
-import GameOver from "./GameOver"
-import HighLow from "./HighLow"
-import InOrOut from "./InOrOut"
-
+import Card from './Card'
+import GameOver from './GameOver'
+import HighLow from './HighLow'
+import InOrOut from './InOrOut'
+import Picture from './Picture'
+import Title from './Title'
 
 class App extends React.Component {
   state = {
@@ -21,10 +22,12 @@ class App extends React.Component {
   render () {
     return (
       <>
-        <Route exact path="/" component={Card} />
+        <Route exact path="/" component={Title} />
+        <Route path="/Card" component={Card} />
         <Route path="/gameOver" component={GameOver} />
         <Route path="/HighLow" component={HighLow} />
-        <Route path="/InOrdOut" component={InOrOut}/>
+        <Route path="/InOrOut" component={InOrOut}/>
+        <Route path="/Picture" component={Picture}/>
       </>
     )
   }

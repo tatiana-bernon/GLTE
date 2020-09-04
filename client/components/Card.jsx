@@ -58,9 +58,7 @@ export default class Card extends Component {
     return (
       <div>
         <h1>
-          Give
-          <span style={s}>Alcohol</span>
-          Love To Everyone
+          Red or Black?
         </h1>
         <button onClick={this.redCard}>Red</button>
         <button onClick={this.blackCard}>Black</button>
