@@ -38,10 +38,6 @@ export default class Card extends Component {
   //   setTimeout(() => 2000)
   // }
   render () {
-    const s = {
-      textDecorationLine: 'line-through'
-    }
-
     // if (
     //   this.state.suit === "HEARTS" || this.state.suit === "DIAMONDS" && this.state.color === "black") {
     //   return <Redirect to="/gameOver" />
@@ -52,7 +48,8 @@ export default class Card extends Component {
     //     return <Redirect to={{pathname: "/HighLow", image: this.state.image, value: this.state.value}}/>
     // }
     if (this.state.color === 'black' || this.state.color === 'red') {
-      return <Redirect to={{ pathname: '/HighLow', image: this.state.image, value: this.state.value, color: this.state.color, suit: this.state.suit }}/>
+      const cardImage = this.state.image
+      return <Redirect to={{ pathname: '/HighLow', image: this.state.image, value: this.state.value, color: this.state.color, suit: this.state.suit, cardImage: cardImage }}/>
     }
 
     return (

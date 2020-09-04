@@ -40,20 +40,28 @@ export default class Picture extends Component {
   //   setTimeout(() => 2000)
   // }
   render () {
-
     if (this.state.number === 'a') {
-      return <Redirect to={{ pathname: '/gameOver', image: this.state.image }}/>
+      const PictureCard = this.state.image
+      return <Redirect to={{ pathname: '/gameOver', image: this.state.image, cardImage: this.props.location.cardImage, HighLowCard: this.props.location.HighLowCard, InOrOutCard: this.props.location.InOrOutCard, PictureCard: PictureCard }}/>
     }
 
     return (
       <div>
         <h1>Picture or Non-Picture?</h1>
-        {/* <button onClick={this.pictureCard}>Picture</button>
-        <button onClick={this.nonPictureCard}>Non-Picture</button> */}
+
         <img
           style={{ height: '300px', width: '250px' }}
-          src={this.state.image}
+          src={this.props.location.cardImage}
         />
+        <img
+          style={{ height: '300px', width: '250px' }}
+          src={this.props.location.HighLowCard}
+        />
+        <img
+          style={{ height: '300px', width: '250px' }}
+          src={this.props.location.InOrOutCard}
+        />
+
         <button onClick={this.pictureCard}>Picture</button>
         <button onClick={this.nonPictureCard}>Non-Picture</button>
       </div>
