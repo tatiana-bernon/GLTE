@@ -47,7 +47,7 @@ export default class Picture extends Component {
 
     return (
       <div>
-        <h1>Picture or Non-Picture?</h1>
+        <h1 className="has-text-white title is-3">Picture or Non-Picture?</h1>
 
         <img
           style={{ height: '300px', width: '250px' }}
@@ -62,8 +62,8 @@ export default class Picture extends Component {
           src={this.props.location.InOrOutCard}
         />
         <br></br>
-        <button className="button is-rounded" onClick={this.pictureCard}>Picture</button>
-        <button className="button is-rounded" onClick={this.nonPictureCard}>Non-Picture</button>
+        <button className="button is-rounded" style={{ marginRight: '10px' }} onClick={this.pictureCard}>Picture</button>
+        <button className="button is-rounded" style={{ marginLeft: '10px' }} onClick={this.nonPictureCard}>Non-Picture</button>
       </div>
     )
   }

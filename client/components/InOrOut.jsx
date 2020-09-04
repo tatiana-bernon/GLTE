@@ -37,7 +37,7 @@ export default class InOrOut extends Component {
     }
     return (
       <div>
-        <h1>In or Out?</h1>
+        <h1 className="has-text-white title is-3">In or Out?</h1>
         <img
           style={{ height: '300px', width: '250px' }}
           src={this.props.location.cardImage}
@@ -47,8 +47,8 @@ export default class InOrOut extends Component {
           src={this.props.location.HighLowCard}
         />
         <br></br>
-        <button className="button is-rounded" onClick={this.InCard}>In</button>
-        <button className="button is-rounded" onClick={this.OutCard}>Out</button>
+        <button className="button is-rounded" style={{ marginRight: '10px' }} onClick={this.InCard}>In</button>
+        <button className="button is-rounded" style={{ marginLeft: '10px' }} onClick={this.OutCard}>Out</button>
       </div>
     )
   }

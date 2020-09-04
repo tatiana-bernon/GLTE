@@ -8,7 +8,7 @@ export default class GameOver extends Component {
   render () {
     return (
       <div>
-        <h1>Game Over</h1>
+        <h1 className="has-text-white title is-3">Game Over</h1>
         <img
           style={{ height: '300px', width: '250px' }}
           src={this.props.location.cardImage}
@@ -26,7 +26,7 @@ export default class GameOver extends Component {
           src={this.props.location.PictureCard}
         />
         <br></br>
-        <Link to={{ pathname: '/' }} ><button className="button is-rounded">Reset</button></Link>
+        <Link to={{ pathname: '/' }} ><button className="button is-rounded" style={{ marginRight: '10px' }}>Reset</button></Link>
         <a href="/"></a>
       </div>
     )

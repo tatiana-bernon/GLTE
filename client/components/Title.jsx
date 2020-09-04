@@ -5,8 +5,8 @@ export default class GameOver extends Component {
   render () {
     return (
       <div className="rows is-vcentered">
-        <h1 className="row">Congratulations, Pohutukawa!</h1>
-        <h2 className="row">Let's Have Some Fun</h2>
+        <h1 className="row; has-text-white title is-1">Congratulations, Pohutukawa!</h1>
+        <h2 className="row; has-text-white title is-2">Let's Have Some Fun</h2>
 
         <img className="row"
           style={{ height: '300px', width: '400px' }}
@@ -14,7 +14,7 @@ export default class GameOver extends Component {
           src={'https://media.giphy.com/media/3EfgWHj0YIDrW/giphy.gif'}
         />
         <br></br>
-        <Link to={{ pathname: '/Card' }} ><button className="button is-rounded ">Play Now!</button></Link>
+        <Link to={{ pathname: '/Card' }} ><button className="button is-rounded" style={{ margin: '10px' }}>Play Now!</button></Link>
       </div>
     )
   }

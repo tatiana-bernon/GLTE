@@ -54,7 +54,7 @@ export default class Card extends Component {
 
     return (
       <div className="container">
-        <h1>
+        <h1 className="has-text-white title is-3">
           Red or Black?
         </h1>
         <img
@@ -62,8 +62,8 @@ export default class Card extends Component {
           src={this.state.image}
         />
         <br></br>
-        <button className="button is-rounded" onClick={this.redCard}>Red</button>
-        <button className="button is-rounded" onClick={this.blackCard}>Black</button>
+        <button className="button is-rounded" style={{ marginRight: '10px' }} onClick={this.redCard}>Red</button>
+        <button className="button is-rounded" style={{ marginLeft: '10px' }} onClick={this.blackCard}>Black</button>
       </div>
     )
   }

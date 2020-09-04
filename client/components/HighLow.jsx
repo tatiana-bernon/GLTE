@@ -35,17 +35,17 @@ export default class HighLow extends Component {
       const HighLowCard = this.state.image
       return <Redirect to={{ pathname: '/InOrOut', image: this.state.image, cardImage: this.props.location.cardImage, HighLowCard: HighLowCard }}/>
     }
-    
+
     return (
       <div>
-        <h1>Higher or Lower?</h1>
+        <h1 className="has-text-white title is-3">Higher or Lower?</h1>
         <img
           style={{ height: '300px', width: '250px' }}
           src={this.state.image}
         />
         <br></br>
-        <button className="button is-rounded" onClick={this.highCard}>Higher</button>
-        <button className="button is-rounded" onClick={this.lowCard}>Lower</button>
+        <button className="button is-rounded" style={{ marginRight: '10px' }}onClick={this.highCard}>Higher</button>
+        <button className="button is-rounded" style={{ marginLeft: '10px' }}onClick={this.lowCard}>Lower</button>
       </div>
     )
   }
