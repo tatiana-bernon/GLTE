@@ -2,21 +2,21 @@ import React, { Component } from "react"
 import { Redirect, Link } from "react-router-dom"
 import { getCard } from "../api"
 
-export default class Card extends Component {
+export default class InOrOut extends Component {
   state = {
-    image:
-      "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    image: this.props.location.image,
+    value: this.props.location.value,
     suit: null,
     color: null,
-    value: null,
+    number: null
   }
   InCard = () => {
     getCard().then((card) => {
       this.setState({
         image: card[0].image,
         value: card[0].value,
-        suit: card[0].suit
-        //color: "red",
+        suit: card[0].suit,
+        number: 'a'
       })
     })
   }
@@ -25,44 +25,26 @@ export default class Card extends Component {
       this.setState({
         image: card[0].image,
         value: card[0].value,
-        suit: card[0].suit
-        //color: "black",
+        suit: card[0].suit,
+        number: 'a'
       })
     })
   }
-
-  // redDelay = () => {
-  //   setTimeout(() => , 2000)
-  // }
-  // blackDelay = () => {
-  //   setTimeout(() => 2000)
-  // }
   render() {
-    const styling = {
-      textDecorationLine: "line-through",
+    if (this.state.number === 'a') {
+      return <Redirect to={{ pathname: '/Picture', image: this.state.image }} />
     }
-
-    //if (
-    //this.state.suit === "HEARTS" || this.state.suit === "DIAMONDS" && this.state.color === "black") {
-    //return <Redirect to="/gameOver" />
-    //} else if (
-    //this.state.suit === "SPADES" || this.state.suit === "CLUBS" && this.state.color === "red") {
-    //return <Redirect to="/gameOver" />
-    //} else if (this.state.suit === "SPADES" || this.state.suit === "CLUBS" && this.state.color === "black") {
-    //return <Redirect to={{ pathname: "/HighLow", image: this.state.image, value: this.state.value }} />
-    //}
-
     return (
       <div>
         <h1>In or Out?</h1>
         <img
           style={{ height: '400px', width: '400px' }}
-          src={this.state.image} 
+          src={this.state.image}
         />
-        <Link onClick={this.InCard} to= {{ pathname: "/Picture" }}><button >In</button></Link>
-        <Link onClick={this.OutCard} to= {{ pathname: "/Picture" }}><button>Out</button></Link>
+
+        <button onClick={this.InCard}>In Card</button>
+        <Link onClick={this.OutCard} to={{ pathname: '/Picture', image: this.state.image }} ><button>Out Card</button></Link>
       </div>
     )
   }
 }
-
