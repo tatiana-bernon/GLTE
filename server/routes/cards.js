@@ -7,10 +7,10 @@ router.use(express.json())
 // GET /api/v1/welcome/
 router.get('/', (req, res) => {
   return request
-    .get('https://deckofcardsapi.com/api/deck/e5x3wjmn7ssd/shuffle')
+    .get('https://deckofcardsapi.com/api/deck/ldadm9x9guqt/shuffle')
     .then(resp => {
       return request
-        .get('https://deckofcardsapi.com/api/deck/e5x3wjmn7ssd/draw/?count=1')
+        .get('https://deckofcardsapi.com/api/deck/ldadm9x9guqt/draw/?count=1')
         .then(resp => {
           console.log(resp.body.remaining)
           res.json(resp.body.cards)
